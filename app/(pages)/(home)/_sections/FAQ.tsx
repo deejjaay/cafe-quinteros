@@ -47,7 +47,7 @@ const FAQPage = () => {
 
   return (
     <section className='md:py-custom-60 md:px-custom-40 py-custom-40 px-custom-16 bg-white lg:px-[120px]'>
-      <h6 className='text-montserrat_bold_28 mb:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[16px]'>Frequently Asked Questions</h6>
+      <h6 className='text-montserrat_bold_28 mb:text-montserrat_bold_40 md:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[32px]'>Frequently Asked Questions</h6>
       {faqs.map((faq, index) => (
         <div className="bg-gray rounded-[10px] mb-[20px]" key={index}>
           <Button
@@ -61,7 +61,7 @@ const FAQPage = () => {
                   <path d="M3 8.5h10a.5.5 0 0 0 0-1H3a.5.5 0 0 0 0 1z" className='stroke-primary' stroke-width="1.2"/>
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-6 h-6 w-[21px] h-[21px] stroke-blue" stroke-width="1.5" width="21px" height="21px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-[21px] h-[21px] stroke-blue" stroke-width="1.5" width="21px" height="21px">
                   <path d="M8 2.75a.75.75 0 0 0-.75.75v3.5H3.5a.75.75 0 0 0 0 1.5h3.75v3.5a.75.75 0 0 0 1.5 0v-3.5h3.75a.75.75 0 0 0 0-1.5h-3.75v-3.5a.75.75 0 0 0-.75-.75z" />
                 </svg>
               )}
