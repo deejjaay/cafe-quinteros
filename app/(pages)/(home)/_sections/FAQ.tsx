@@ -4,15 +4,15 @@ import { Button } from '@radix-ui/themes';
 import { useState } from 'react';
 
 const FAQPage = () => {
-  const [openIndex, setOpenIndex] = useState<number[]>([0]);
+    const [openIndex, setOpenIndex] = useState<number[]>([0]);
 
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(prev => {
-      if (prev.includes(index))
-        return prev.filter(i => i !== index);
-      return [...prev, index];
-    });
-  };
+    const toggleAccordion = (index: number) => {
+        setOpenIndex(prev => {
+        if (prev.includes(index))
+            return prev.filter(i => i !== index);
+        return [...prev, index];
+        });
+    };
 
   const faqs = [
     {
@@ -45,40 +45,42 @@ const FAQPage = () => {
     },    
   ];
 
-  return (
-    <section className='md:py-custom-60 md:px-custom-40 py-custom-40 px-custom-16 bg-white lg:px-[120px]'>
-      <h6 className='text-montserrat_bold_28 mb:text-montserrat_bold_40 md:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[32px]'>Frequently Asked Questions</h6>
-      {faqs.map((faq, index) => (
-        <div className="bg-gray rounded-[10px] mb-[20px]" key={index}>
-          <Button
-            onClick={() => toggleAccordion(index)}
-            className="w-full flex justify-between items-center py-[30px] px-[28px]"
-          >
-            <span className='flex text-left text-montserrat_bold_16 pr-5'>{faq.question}</span>
-            <span className={`w-[21px] h-[21px] text-blue transition-transform duration-300 ${openIndex.includes(index) ? 'rotate-180' : ''}`}>
-              {openIndex.includes(index) ? (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="21" height="21">
-                  <path d="M3 8.5h10a.5.5 0 0 0 0-1H3a.5.5 0 0 0 0 1z" className='stroke-primary' stroke-width="1.2"/>
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-[21px] h-[21px] stroke-blue" stroke-width="1.5" width="21px" height="21px">
-                  <path d="M8 2.75a.75.75 0 0 0-.75.75v3.5H3.5a.75.75 0 0 0 0 1.5h3.75v3.5a.75.75 0 0 0 1.5 0v-3.5h3.75a.75.75 0 0 0 0-1.5h-3.75v-3.5a.75.75 0 0 0-.75-.75z" />
-                </svg>
-              )}
-            </span>
-          </Button>
+    return (
+        <section className='md:py-custom-60 py-custom-40 bg-white'>
+            <div className='container xl:max-w-xl'>
+                <h6 className='text-montserrat_bold_28 mb:text-montserrat_bold_40 md:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[32px]'>Frequently Asked Questions</h6>
+                {faqs.map((faq, index) => (
+                    <div className="bg-gray rounded-[10px] mb-[20px]" key={index}>
+                        <Button
+                            onClick={() => toggleAccordion(index)}
+                            className="w-full flex justify-between items-center py-[30px] px-[28px]"
+                        >
+                            <span className='flex text-left text-montserrat_bold_16 pr-5'>{faq.question}</span>
+                            <span className={`w-[21px] h-[21px] text-blue transition-transform duration-300 ${openIndex.includes(index) ? 'rotate-180' : ''}`}>
+                                {openIndex.includes(index) ? (
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="21" height="21">
+                                        <path d="M3 8.5h10a.5.5 0 0 0 0-1H3a.5.5 0 0 0 0 1z" className='stroke-primary' stroke-width="1.2"/>
+                                    </svg>
+                                ) : (
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-[21px] h-[21px] stroke-blue" stroke-width="1.5" width="21px" height="21px">
+                                        <path d="M8 2.75a.75.75 0 0 0-.75.75v3.5H3.5a.75.75 0 0 0 0 1.5h3.75v3.5a.75.75 0 0 0 1.5 0v-3.5h3.75a.75.75 0 0 0 0-1.5h-3.75v-3.5a.75.75 0 0 0-.75-.75z" />
+                                    </svg>
+                                )}
+                            </span>
+                        </Button>
 
-          <div
-            className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${openIndex.includes(index) ? 'max-h-screen border-t-2 border-blue' : ''}`}
-          >
-            <div className="p-[28px] text-montserrat_regular_14 opacity-60">
-              {faq.answer}
+                        <div
+                            className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${openIndex.includes(index) ? 'max-h-screen border-t-2 border-blue' : ''}`}
+                        >
+                            <div className="p-[28px] text-montserrat_regular_14 opacity-60">
+                            {faq.answer}
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        </div>
-      ))}
-    </section>
-  );
+        </section>
+    );
 };
 
 export default FAQPage;

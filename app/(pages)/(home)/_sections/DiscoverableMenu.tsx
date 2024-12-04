@@ -59,44 +59,46 @@ const DiscoverOurMenuPage = ({}) => {
     ];
 
   return (
-    <section className="md:py-custom-60 md:px-custom-40 py-custom-40 px-custom-16 bg-background_color lg:px-[120px]">
-        <div>
-            <h2 className="text-montserrat_bold_28 mb:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-5 lg:text-center">Discover Our Menu</h2>
-            <p className="text-montserrat_regular_16 xl:text-montserrat_regular_20 mb-[48px] opacity-60 lg:text-center">
-                From classic breakfasts to sweet desserts, our menu is filled with Salvadoran favorites.
-            </p>
-        </div>
+    <section className="md:py-custom-60 py-custom-40 bg-gray">
+        <div className="container xl:max-w-xl">
+            <div>
+                <h2 className="text-montserrat_bold_28 mb:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-5 lg:text-center">Discover Our Menu</h2>
+                <p className="text-montserrat_regular_16 xl:text-montserrat_regular_20 mb-[48px] opacity-60 lg:text-center">
+                    From classic breakfasts to sweet desserts, our menu is filled with Salvadoran favorites.
+                </p>
+            </div>
 
-        <div>
-            <h3 className="text-montserrat_bold_20 mb-5">Best Seller</h3>
-            <ul className="grid grid-cols-1 gap-[32px] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-0">
-                {menus.map((menu, index) => (
-                <li
-                    key={index}
-                    className="bg-white rounded-[16px] overflow-hidden shadow-lg"
-                >
-                    <div className="flex flex-col lg:flex-col md:flex-row h-full">
-                        
-                        <Image
-                            className="w-full lg:w-full md:w-[200px] h-[182px] rounded-t-lg lg:h-[182px] md:h-full"
-                            src={menu.img}
-                            alt={menu.eng_lable}
-                        />
+            <div>
+                <h3 className="text-montserrat_bold_20 mb-5">Best Seller</h3>
+                <ul className="grid grid-cols-1 gap-[32px] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-0">
+                    {menus.map((menu, index) => (
+                    <li
+                        key={index}
+                        className="bg-white rounded-[16px] overflow-hidden shadow-lg"
+                    >
+                        <div className="flex flex-col lg:flex-col md:flex-row h-full">
+                            
+                            <Image
+                                className="w-auto lg:w-full md:w-[200px] h-[182px] rounded-t-lg lg:h-[182px] md:h-full"
+                                src={menu.img}
+                                alt={menu.eng_lable}
+                            />
 
-                        <div className="p-5 flex flex-col justify-between flex-grow">
-                            <h4 className="text-montserrat_bold_20 mb-5">{menu.label}</h4>
-                            <h5 className="text-montserrat_regular_20 mb-5">{menu.eng_lable}</h5>
-                            <p className="text-montserrat_regular_16 opacity-60 mb-7">
-                                {menu.description}
-                            </p>
-                            <span className="text-primary text-montserrat_bold_20 mt-auto">
-                                {menu.price}
-                            </span>
+                            <div className="p-5 flex flex-col justify-between flex-grow">
+                                <h4 className="text-montserrat_bold_20 mb-5">{menu.label}</h4>
+                                <h5 className="text-montserrat_regular_20 mb-5">{menu.eng_lable}</h5>
+                                <p className="text-montserrat_regular_16 opacity-60 mb-7">
+                                    {menu.description}
+                                </p>
+                                <span className="text-primary text-montserrat_bold_20 mt-auto">
+                                    {menu.price}
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            ))}
-            </ul>
+                    </li>
+                ))}
+                </ul>
+            </div>
         </div>
     </section>
   );
