@@ -1,8 +1,8 @@
 import React from 'react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../(pages)/(home)/_components/ui/Dialog';
-import ContactUsForm from './ContactUsForm';
+// import ContactUsForm from './ContactUsForm';
 import ContactUsButton from './ContactUsButton';
-
+import Sample from './Sample';
 interface ContactUsModalProps {
     buttonSize?: 'why_choose' | 'hero' | 'nav';
 }
@@ -18,7 +18,7 @@ const ContactUsModal: React.FC<ContactUsModalProps> = ({ buttonSize = 'hero' }) 
                 <DialogHeader>
                     <DialogTitle>Contact Café Quinteros</DialogTitle>
                     <DialogDescription>
-                        <ContactUsForm />
+                        <Sample />
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
