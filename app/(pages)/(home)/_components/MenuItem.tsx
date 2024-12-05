@@ -23,7 +23,7 @@ const MenuItemPage = () => {
     return (
         <>
             <div>
-                <ul className='flex gap-[24px] overflow-x-auto whitespace-nowrap mb-[28px]'>
+                <ul className='flex gap-[24px] overflow-x-auto whitespace-nowrap mb-[28px] scrollbar-hide'>
                     {categories.map((category, index) => (
                         <li
                             key={index}

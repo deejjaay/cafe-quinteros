@@ -30,3 +30,6 @@ html {
     animation: slide-right-left 15s linear infinite;
   }
   
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
