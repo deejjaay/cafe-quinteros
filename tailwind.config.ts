@@ -47,31 +47,28 @@ const config: Config = {
   			montserrat_bold_64: ["6.4rem", { lineHeight: "7.8rem", fontWeight: "700" }]
   		},
   		spacing: {
-  			'custom-40': '40px',
-  			'custom-16': '16px',
-  			'custom-60': '60px'
+  			'custom-40': '4rem',
+  			'custom-16': '1.6rem',
+  			'custom-60': '6rem'
   		},
   		colors: {
 			primary: "#995B1A",
 			sub_text: "#060808",
 			gray: "#E6F3F7",
 			blue: "#9FCADB",
-			brown: "4C2A07",
+			brown: "#4C2A07",
   		},
   		boxShadow: {
   			shadow_1: '0px 4px 22.6px 0px rgba(76, 94, 111, 0.07)',
   			shadow_2: '-4px 7px 18.5px 0px rgba(76, 94, 111, 0.15)'
   		},
   		animation: {
-  			'slide-right-left': 'slide-right-left 5s linear infinite'
+  			'slide-right-left': 'slide-right-left 15s linear infinite'
   		},
   		keyframes: {
   			'slide-right-left': {
-  				'0%': {
-  					transform: 'translateX(100%)'
-  				},
   				'100%': {
-  					transform: 'translateX(-100%)'
+  					transform: 'translateX(-50%)'
   				}
   			}
   		},

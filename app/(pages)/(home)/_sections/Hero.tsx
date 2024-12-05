@@ -17,7 +17,7 @@ const HeroPage = () => {
                         Enjoy the true taste of El Salvador with every sip and bite. We serve local coffee, traditional food, and sweet treats.
                     </p>
                     
-                    <ContactUsModal />
+                    <ContactUsModal buttonSize='hero' />
                 </div>
 
                 <Image 

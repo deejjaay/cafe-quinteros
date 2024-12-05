@@ -53,7 +53,7 @@ const WhyChooseUsPage = () => {
                 </ul>
 
                 <div className='flex justify-center lg:justify-center'>
-                    <ContactUsModal /> 
+                    <ContactUsModal buttonSize='why_choose' /> 
                 </div>
             </div>
         </section>

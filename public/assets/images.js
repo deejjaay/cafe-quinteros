@@ -24,7 +24,7 @@ export const menus = [
         img: Brownie, 
         description: 'Rich, fudgy chocolate brownie, chewy and decadent. A chocolate lover&apos;s dream, perfect on its own or with a scoop of ice cream!', 
         price: '$2.50',
-        category: 'Desserts'
+        category: 'Desserts',
     },
     {
         label: 'Budin', 
@@ -48,7 +48,8 @@ export const menus = [
         img: CafeLatte, 
         description: 'Creamy and rich, this espresso drink combines steamed milk with a light layer of froth. Perfect for those who love a smooth coffee experience!', 
         price: '$2.50',
-        category: 'Hot Beverages'
+        category: 'Hot Beverages',
+        best_seller: 'Cafe Latte'
     },
     {
         label: 'Cappuccino', 
@@ -64,7 +65,8 @@ export const menus = [
         img: CreppaBanana, 
         description: 'A delightful combination of thin crepes filled with rich chocolate and sweet bananas. Perfect for a decadent dessert or breakfast!', 
         price: '$2.50',
-        category: 'Desserts'
+        category: 'Desserts',
+        best_seller: 'Crepa De Chocolate Y Banana'
     },
     {
         label: 'Croissant de Jamon y Queso', 
@@ -80,7 +82,8 @@ export const menus = [
         img: ChickenCroissant, 
         description: 'Buttery and tender, this croissant is filled with juicy chicken and creamy sauce. Perfect for a flavorful lunch or light snack!', 
         price: '$2.50',
-        category: 'More snacks'
+        category: 'More snacks',
+        best_seller: 'Croissant de Pollo'
     },
     {
         label: 'Flan Napolitano', 
@@ -104,7 +107,8 @@ export const menus = [
         img: Caramelo, 
         description: 'Smooth and decadent, this blended caramel beverage is garnished with whipped cream and a caramel drizzle. Ideal for a refreshing treat!', 
         price: '$2.50',
-        category: 'Cold Drinks'
+        category: 'Cold Drinks',
+        best_seller: 'Frappe De Caramelo'
     },
     {
         label: 'Frappe de mocha', 
@@ -136,7 +140,8 @@ export const menus = [
         img: HamChessePanini, 
         description: 'This sandwich features layers of savory ham and melted cheese between crispy bread. A delicious choice for a satisfying meal!', 
         price: '$3.50',
-        category: 'More snacks'
+        category: 'More snacks',
+        best_seller: 'Panini De Jamon Y Queso'
     },
     {
         label: 'Pizza Peperoni', 
@@ -160,6 +165,7 @@ export const menus = [
         img: BananaWalnutCaramelWaffle, 
         description: 'A delicious waffle topped with sweet banana slices, crunchy walnuts, and drizzled with rich caramel. Perfect for a decadent breakfast or dessert!', 
         price: '$3.50',
-        category: 'Desserts'
+        category: 'Desserts',
+        best_seller: 'Waffle De Banana, Nuez Y Caramelo'
     },
 ];

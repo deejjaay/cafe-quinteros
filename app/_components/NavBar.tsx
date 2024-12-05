@@ -31,8 +31,8 @@ const NavBar = () => {
     ];
 
     return (
-        <nav
-            className={`sticky top-0 z-50 flex justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-white shadow-lg' : ''}`}
+        <div
+            className={`sticky top-0 z-50 flex justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-white shadow-lg border-b-2 border-blue' : ''}`}
         >
             <div className='container flex justify-between xl:max-w-xl'>
                 <div className='flex items-center xl:gap-[1.6rem]'>
@@ -50,7 +50,7 @@ const NavBar = () => {
                     </Link>
                 </div>
 
-                <div className="md:flex items-center gap-[32px]">
+                <nav className="md:flex items-center gap-[32px]">
                     <div className="hidden lg:flex gap-[32px]">
                         <Link href="/about" className="text-lg text-montserrat_regular_16">About Us</Link>
                         <Link href="/visit" className="text-lg text-montserrat_regular_16">Visit Us</Link>
@@ -71,7 +71,7 @@ const NavBar = () => {
                             </DropdownMenu.Root>
                             
                             <div className='hidden lg:flex'>
-                                <ContactUsModal />
+                                <ContactUsModal buttonSize='nav'/>
                             </div>
                         </div>
 
@@ -81,20 +81,19 @@ const NavBar = () => {
                                     <Image src={Menu} alt="Burger Menu Icon" className="cursor-pointer" />
                                 </DropdownMenu.Trigger>
                                 <DropdownMenu.Content className="flex flex-wrap rounded-[8px] bg-white p-5 z-50">
-                                    {links.map(link => 
-                                    <DropdownMenu.Item className='mb-[32px]'>
-                                        <Link href={link.href} className='text-montserrat_regular_16 opacity-60'>{link.label}</Link>
-                                    </DropdownMenu.Item>
+                                    {links.map((link, index) => 
+                                        <DropdownMenu.Item className='mb-[32px]'>
+                                            <Link key={index} href={link.href} className='text-montserrat_regular_16 opacity-60'>{link.label}</Link>
+                                        </DropdownMenu.Item>
                                     )}
-                                    
                                     <ContactUsModal />
                                 </DropdownMenu.Content>
                             </DropdownMenu.Root>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
-        </nav>
+        </div>
     );
 };
 

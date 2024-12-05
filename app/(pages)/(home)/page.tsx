@@ -11,7 +11,6 @@ export default function Home() {
     <>
       <HeroPage />
       <DiscoverOurMenuPage />
-      <MenuItemPage />
       <WhyChooseUsPage />
       <WordsFromCustomersPage />
       <FAQPage />

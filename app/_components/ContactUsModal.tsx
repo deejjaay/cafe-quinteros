@@ -3,12 +3,16 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import ContactUsForm from './ContactUsForm';
 import ContactUsButton from './ContactUsButton';
 
-const ContactUsModal = () => {
+interface ContactUsModalProps {
+    buttonSize?: 'why_choose' | 'hero' | 'nav';
+}
+
+const ContactUsModal: React.FC<ContactUsModalProps> = ({ buttonSize = 'hero' }) => {
 
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <ContactUsButton />
+                <ContactUsButton size={buttonSize} />
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
