@@ -33,3 +33,7 @@ html {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
+
+.link-opacity {
+    opacity: 1 !important;
+  }

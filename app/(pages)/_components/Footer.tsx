@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image';
-import  Logo  from '../../public/images/logo.png';
-import Armada from '../../public/images/armada.png';
-import  WhatsApp from '../../public/images/discover/mobile/whatsapp.png';
-import  Facebook from '../../public/images/discover/mobile/facebook.png';
-import  Instagram from '../../public/images/discover/mobile/instagram.png';
-import  CafeQuinteros from '../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
+import  Logo  from '../../../public/images/logo.png';
+import Armada from '../../../public/images/armada.png';
+import  WhatsApp from '../../../public/images/discover/mobile/whatsapp.png';
+import  Facebook from '../../../public/images/discover/mobile/facebook.png';
+import  Instagram from '../../../public/images/discover/mobile/instagram.png';
+import  CafeQuinteros from '../../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
 import Link from 'next/link';
 
 const Footer = () => {

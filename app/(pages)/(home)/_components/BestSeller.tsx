@@ -17,8 +17,10 @@ const BestSeller = () => {
                             <Image
                                 className="w-auto lg:w-full md:w-[200px] h-[182px] rounded-t-lg lg:h-[182px] md:h-full"
                                 src={menu.img}
-                                alt={menu.eng_lable}
+                                alt={menu.eng_lable || 'Default alt text'}
+                                
                             />
+
 
                             <div className="p-5 flex flex-col justify-between flex-grow">
                                 <h4 className="text-montserrat_bold_20 mb-5">{menu.label}</h4>

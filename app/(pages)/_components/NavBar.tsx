@@ -3,14 +3,14 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import Logo from '../../public/images/logo.png';
-import Dropdown from '../../public/images/nav_dropdown.png';
-import Menu from '../../public/images/menu.png';
+import Logo from '../../../public/images/logo.png';
+import Dropdown from '../../../public/images/nav_dropdown.png';
+import Menu from '../../../public/images/menu.png';
 import { FaCaretDown } from "react-icons/fa";
 import { Button, DropdownMenu } from '@radix-ui/themes';
 import Link from 'next/link';
-import CafeQuinteros from '../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
-import ContactUsModal from './ContactUsModal';
+import CafeQuinteros from '../../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
+import ContactUsModal from '@/app/_components/ContactUsModal';
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -82,8 +82,8 @@ const NavBar = () => {
                                 </DropdownMenu.Trigger>
                                 <DropdownMenu.Content className="flex flex-wrap rounded-[8px] bg-white p-5 z-50">
                                     {links.map((link, index) => 
-                                        <DropdownMenu.Item className='mb-[32px]'>
-                                            <Link key={index} href={link.href} className='text-montserrat_regular_16 opacity-60'>{link.label}</Link>
+                                        <DropdownMenu.Item key={index} className='mb-[32px]'>
+                                            <Link href={link.href} className='text-montserrat_regular_16 opacity-60'>{link.label}</Link>
                                         </DropdownMenu.Item>
                                     )}
                                     <ContactUsModal />

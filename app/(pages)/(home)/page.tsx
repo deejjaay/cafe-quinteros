@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <HeroPage />
-      {/* <DiscoverOurMenuPage />
+      <DiscoverOurMenuPage />
       <WhyChooseUsPage />
-      <WordsFromCustomersPage /> */}
+      <WordsFromCustomersPage />
       <FAQPage />
-      {/* <JoinOurCommunityPage /> */}
+      <JoinOurCommunityPage />
     </>
   );
 }
