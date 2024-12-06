@@ -3,49 +3,55 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
 import { FormControl, FormField, FormItem, FormMessage } from '../(pages)/(home)/_components/ui/Form';
-import { Button } from '@radix-ui/themes';
 import { z } from 'zod';
 import { Input } from '../(pages)/(home)/_components/ui/input';
 import { Textarea } from "../(pages)/(home)/_components/ui/textarea";
 import Link from "next/link";
+import { Button } from "../(pages)/(home)/_components/ui/Button";
 
 const schema = z.object({
-    fullName: z.string().min(3, "Please provide a valid full name" ),
+    fullName: z.string().min(3, "Please provide a valid full name"),
     whatsapp: z.string().regex(/^\+?\d{10,15}$/, 'Please provide a valid WhatsApp number'),
     message: z.string(),
 });
 
 const ContactUsButton = () => {
-
-    const methods = useForm({
+    const form = useForm({
         resolver: zodResolver(schema),
     });
 
     const onSubmit = (data: any) => {
         console.log(data);
-        methods.reset();
+        form.reset();
     };
 
     const users = [
-        { name: 'fullName', placeholder: 'Full name*' },
-        { name: 'whatsapp', placeholder: 'WhatsApp number*' },
+        { input: 'fullName', placeholder: 'Full name*' },
+        { input: 'whatsapp', placeholder: 'WhatsApp number*' },
     ];
 
     return (
-        <FormProvider {...methods}>
-            <form className="space-y-8" onSubmit={methods.handleSubmit(onSubmit)}>
+        <FormProvider {...form}>
+            <form className="space-y-8" onSubmit={form.handleSubmit(onSubmit)}>
                 {users.map(user => (
                     <FormField
-                        key={user.name}
-                        name={user.name}
-                        render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <Input placeholder={user.placeholder} {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                        )}
+                        key={user.input}
+                        name={user.input}
+                        render={({ field }) => {
+                            const hasError = form.formState.errors[user.input];
+                            return (
+                                <FormItem>
+                                    <FormControl>
+                                        <Input
+                                            placeholder={user.placeholder}
+                                            {...field}
+                                            className={`${ hasError ? 'border-primary rounded-[8px]' : 'border-gray rounded-[8px]' }`}
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            );
+                        }}
                     />
                 ))}
 
@@ -62,16 +68,16 @@ const ContactUsButton = () => {
 
                 <p className='mb-[32px] text-montserrat_regular_14 text-sub_text'>
                     <span className="opacity-20">By submitting this form, you agree to our </span>
-                    <Link href={"/"}>Privacy Policy </Link> 
-                    <span className="opacity-20">and </span> 
+                    <Link href={"/"}>Privacy Policy </Link>
+                    <span className="opacity-20">and </span>
                     <Link href={"/"}>Site Terms</Link>
                 </p>
 
-                <Button
+                <Button 
+                    className="w-full h-[5.2rem]" 
                     type="submit"
-                    className="w-full bg-primary text-white text-montserrat_bold_16 h-[52px] py-2 px-4 rounded-[8px] hover:bg-primary-dark focus:outline-none"
-                >
-                    Submit
+                > 
+                    Submit 
                 </Button>
             </form>
         </FormProvider>
