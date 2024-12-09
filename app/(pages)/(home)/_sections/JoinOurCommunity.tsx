@@ -9,7 +9,7 @@ const JoinOurCommunityPage = () => {
                 <div className='container gap-[80px] md:py-custom-60 py-custom-40 md:flex-wrap xl:px-[4rem] grid xl:grid-cols-2'>
                     <div className="md:flex md:flex-wrap">
                         <div className="md:flex md:flex-wrap md:w-full mb-[48px]">
-                            <h6 className="text-montserrat_bold_24 text-white mb-[16px] w-full">
+                            <h6 className="w-full text-montserrat_bold_24 text-white mb-[16px]">
                                 Join Our Cafe Community
                             </h6>
                             <p className="text-montserrat_regular_16 text-white opacity-60">
@@ -17,13 +17,13 @@ const JoinOurCommunityPage = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap md:flex-nowrap gap-[16px] w-full xl:items-end">
+                        <div className="w-full flex flex-wrap gap-[16px] md:flex-nowrap xl:items-end">
                             <input
                                 className="w-full h-[64px] rounded-[8px] pl-3"
                                 type="text"
                                 placeholder="WhatsApp number*"
                             />
-                            <button className="w-full md:w-auto px-[16px] h-[64px] rounded-[8px] text-white bg-primary text-montserrat_bold_16_1 whitespace-nowrap">
+                            <button className="w-full px-[16px] h-[64px] rounded-[8px] text-white bg-primary text-montserrat_bold_16_1 whitespace-nowrap md:w-auto">
                                 Join Community
                             </button>
                         </div>
@@ -34,7 +34,7 @@ const JoinOurCommunityPage = () => {
                         width={352} 
                         height={410}
                         alt={'Map'} 
-                        className="w-full md:h-[410px] lg:h-[251px] object-cover rounded-[8px]"
+                        className="w-full object-cover rounded-[8px] md:h-[410px] xl:h-[251px]"
                     />
                 </div>
             </div>

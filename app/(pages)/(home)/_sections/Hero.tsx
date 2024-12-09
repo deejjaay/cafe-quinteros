@@ -8,7 +8,7 @@ const HeroPage = () => {
         <section className="flex md:py-custom-60 py-custom-40 gap-24">
             <div className="container flex justify-between items-center md:gap-[2.4rem] lg:gap-[3.2rem] xl:gap-[4.8rem] xl:max-w-xl">
                 <div className="flex flex-wrap xl:w-[60.6rem] xl:h-[38rem]">
-                    <h1 className="w-full mb-[1.6rem] text-montserrat_bold_32 md:text-montserrat_bold_46 lg:text-montserrat_bold_52 flex flex-wrap">
+                    <h1 className="w-full lex flex-wrap mb-[1.6rem] text-montserrat_bold_32 md:text-montserrat_bold_46 lg:text-montserrat_bold_52">
                         <span className="w-full text-montserrat_bold_18">Café Quinteros:</span>For&nbsp;
                         <span className="text-primary">Salvadorans&nbsp; </span>by Salvadorans
                     </h1>

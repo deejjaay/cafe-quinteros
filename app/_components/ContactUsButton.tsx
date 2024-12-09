@@ -10,7 +10,7 @@ const ContactUsButton = React.forwardRef<HTMLButtonElement, ContactUsButtonProps
     const { size = 'hero', ...rest } = props;
 
     const sizeClasses = {
-        nav: 'lg:w-[14rem] xl:w-[18rem] h-[4.8rem]',
+        nav: 'h-[4.8rem] lg:w-[14rem] xl:w-[18rem]',
         hero: 'w-[18rem] h-[6.4rem]',
         why_choose: 'w-[24rem] h-[6.4rem]', 
     };

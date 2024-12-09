@@ -45,7 +45,7 @@ const ContactUsButton = () => {
                                         <Input
                                             placeholder={user.placeholder}
                                             {...field}
-                                            className={`${ hasError ? 'border-primary rounded-[8px]' : 'border-gray rounded-[8px]' }`}
+                                            className={`${ hasError ? 'border-primary rounded-[.8rem]' : 'border-gray rounded-[.8rem]' }`}
                                         />
                                     </FormControl>
                                     <FormMessage />

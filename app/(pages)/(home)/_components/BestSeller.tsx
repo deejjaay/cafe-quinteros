@@ -5,15 +5,15 @@ const BestSeller = () => {
     const bestSellers = menus.filter(menu => menu.best_seller);
     
     return (
-        <ul className="grid grid-cols-1 gap-[32px] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-[8rem]"> 
+        <ul className="grid grid-cols-1 gap-[3.2rem] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-[8rem]"> 
             {bestSellers.map((menu, index) => (
                 <li
                     key={index}
-                    className="bg-white rounded-[16px] overflow-hidden shadow-lg"
+                    className="bg-white rounded-[1.6rem] overflow-hidden shadow-lg"
                 >
-                    <div className="flex flex-col lg:flex-col md:flex-row h-full">
+                    <div className="flex flex-col h-full md:flex-row lg:flex-col">
                         <Image
-                            className="w-auto h-[18.2rem] object-cover md:h-full lg:w-full md:w-[20rem] md:object-fill rounded-t-lg lg:h-[18.2rem] lg:object-cover"
+                            className="w-auto h-[18.2rem] object-cover md:h-full md:w-[20rem] md:object-fill rounded-t-lg lg:object-cover lg:w-full lg:h-[18.2rem]"
                             src={menu.img}
                             alt={menu.eng_name || 'Default alt text'}
                             

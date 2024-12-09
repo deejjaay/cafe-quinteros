@@ -21,7 +21,7 @@ const MenuItemPage = () => {
 
     return (
         <>
-            <ul className='flex gap-[24px] overflow-x-auto whitespace-nowrap mb-[28px] scrollbar-hide'>
+            <ul className='flex gap-[2.4rem] overflow-x-auto whitespace-nowrap mb-[2.8rem] scrollbar-hide'>
                 {categories.map((category, index) => (
                     <li
                         key={index}
@@ -39,10 +39,10 @@ const MenuItemPage = () => {
                 ))}
             </ul>
 
-            <ul className="grid grid-cols-1 gap-[32px] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-[3.2rem] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
                 {filteredMenus.map((menu, index) => (
-                    <li key={index} className="bg-white rounded-[16px] overflow-hidden shadow-lg">
-                        <div className="flex flex-col lg:flex-col md:flex-row h-full gap-[16px]">
+                    <li key={index} className="bg-white rounded-[1.6rem] overflow-hidden shadow-lg">
+                        <div className="flex flex-col h-full gap-[1.6rem] md:flex-row lg:flex-col">
                             <Image
                                 className="w-auto h-[18.2rem] object-cover md:w-[20rem] md:h-full md:object-fill rounded-t-lg lg:w-full lg:h-[18.2rem] lg:object-cover"
                                 src={menu.img}

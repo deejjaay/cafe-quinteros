@@ -40,13 +40,15 @@ const Feedbacks = () => {
                         <Image 
                             src={user.img}
                             alt={user.name}
+                            width={16}
+                            height={16}
                             className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                         />
                     
                         <div className='flex w-full flex-wrap'>
-                            <span className='w-full text-montserrat_bold_16 mb-[8px]'>{user.name}</span>
+                            <span className='w-full text-montserrat_bold_16 mb-[.8rem]'>{user.name}</span>
                             
-                            <span className='text-montserrat_bold_16 flex gap-[8px] items-center overflow-hidden'>
+                            <span className='text-montserrat_bold_16 flex gap-[.8rem] items-center overflow-hidden'>
                                 {user.rating}
                                 <div className='flex flex-wrap gap-1'>
                                     <RatingStars rating={parseFloat(user.rating)} maxRating={5} />
@@ -55,7 +57,7 @@ const Feedbacks = () => {
                         </div>
                     </div>
                     
-                    <p className='flex w-full flex-wrap text-montserrat_regular_16 opacity-60 mb-[25px]'>
+                    <p className='flex w-full flex-wrap text-montserrat_regular_16 opacity-60 mb-[2.5rem]'>
                     {typeof user.description === 'string'
                         ? user.description
                         : Object.entries(user.description).map(([key, value]) => (
@@ -67,7 +69,7 @@ const Feedbacks = () => {
                     </p>
                 
                     <div className='flex w-full text-montserrat_regular_16 mt-[auto]'>
-                        <span className='pr-[16px] opacity-60'>Posted on</span>
+                        <span className='pr-[1.6rem] opacity-60'>Posted on</span>
                         <Image src={user.posted_on} alt={'Google'} />
                     </div>
                 </li>
