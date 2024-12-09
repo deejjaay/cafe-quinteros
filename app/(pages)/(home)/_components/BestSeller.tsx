@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { menus } from '../../../../public/assets/images';
-import MenuItemPage from "./MenuItem";
 
 const BestSeller = () => {
     const bestSellers = menus.filter(menu => menu.best_seller);
@@ -14,7 +13,7 @@ const BestSeller = () => {
                 >
                     <div className="flex flex-col lg:flex-col md:flex-row h-full">
                         <Image
-                            className="w-auto lg:w-full md:w-[200px] h-[182px] rounded-t-lg lg:h-[182px] md:h-full"
+                            className="w-auto h-[18.2rem] object-cover md:h-full lg:w-full md:w-[20rem] md:object-fill rounded-t-lg lg:h-[18.2rem] lg:object-cover"
                             src={menu.img}
                             alt={menu.eng_name || 'Default alt text'}
                             

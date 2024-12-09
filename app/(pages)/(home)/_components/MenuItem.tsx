@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@radix-ui/themes'
 import { useState } from 'react';
 import { menus } from '../../../../public/assets/images';
 import Image from "next/image";
@@ -31,11 +30,11 @@ const MenuItemPage = () => {
                             : 'opacity-40'}`
                         }
                     >
-                        <Button 
+                        <button 
                             onClick={() => setActiveTab(category.label)}
                         >
                             {category.label}
-                        </Button>
+                        </button>
                     </li>
                 ))}
             </ul>
@@ -45,7 +44,7 @@ const MenuItemPage = () => {
                     <li key={index} className="bg-white rounded-[16px] overflow-hidden shadow-lg">
                         <div className="flex flex-col lg:flex-col md:flex-row h-full gap-[16px]">
                             <Image
-                                className="w-auto md:w-[200px] md:h-full h-auto rounded-t-lg lg:w-full lg:h-[182px]"
+                                className="w-auto h-[18.2rem] object-cover md:w-[20rem] md:h-full md:object-fill rounded-t-lg lg:w-full lg:h-[18.2rem] lg:object-cover"
                                 src={menu.img}
                                 alt={menu.eng_name}
                             />
