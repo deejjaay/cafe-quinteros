@@ -7,10 +7,10 @@ import Logo from '../../../public/images/logo.png';
 import Dropdown from '../../../public/images/nav_dropdown.png';
 import Menu from '../../../public/images/menu.png';
 import { FaCaretDown } from "react-icons/fa";
-import { Button, DropdownMenu } from '@radix-ui/themes';
 import Link from 'next/link';
 import CafeQuinteros from '../../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
 import ContactUsModal from '@/app/_components/ContactUsModal';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../(home)/_components/ui/Dropdown';
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -26,9 +26,11 @@ const NavBar = () => {
 
     const links = [
         {label: "Home", href: '/'},
-        {label: "About Us", href: '/about'},
-        {label: "Visit Us", href: '/visit'},
+        {label: "About Us", href: '/about-us'},
+        {label: "Visit Us", href: '/visit-us'},
     ];
+
+    const filteredLinks = links.filter(link => link.label !== "Home");
 
     return (
         <div
@@ -52,23 +54,26 @@ const NavBar = () => {
 
                 <nav className="md:flex items-center gap-[32px]">
                     <div className="hidden lg:flex gap-[32px]">
-                        <Link href="/about" className="text-lg text-montserrat_regular_16">About Us</Link>
-                        <Link href="/visit" className="text-lg text-montserrat_regular_16">Visit Us</Link>
+                        {filteredLinks.map((link, index) => {
+                            return(
+                                <Link key={index} href={link.href} className="text-lg text-montserrat_regular_16">{link.label}</Link>
+                            )
+                        })}
                     </div>
 
                     <div className="flex gap-[16px]">
                         <div className="md:flex items-center gap-[32px]">
-                            <DropdownMenu.Root>
-                                <DropdownMenu.Trigger>
-                                    <Button className="flex items-center">
-                                        <Image src={Dropdown} alt="Dropdown" />
-                                        <FaCaretDown />
-                                    </Button>
-                                </DropdownMenu.Trigger>
-                                <DropdownMenu.Content>
-                                    <DropdownMenu.Item>Philippines</DropdownMenu.Item>
-                                </DropdownMenu.Content>
-                            </DropdownMenu.Root>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger className='flex items-end'>
+                                    <Image src={Dropdown} alt="Dropdown" />
+                                    <FaCaretDown />
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent>
+                                    <DropdownMenuItem>Spanish</DropdownMenuItem>
+                                    <DropdownMenuItem>English</DropdownMenuItem>
+                                    <DropdownMenuItem>French</DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                             
                             <div className='hidden lg:flex'>
                                 <ContactUsModal buttonSize='nav'/>
@@ -76,19 +81,19 @@ const NavBar = () => {
                         </div>
 
                         <div className="flex lg:hidden gap-[3.2rem]">
-                            <DropdownMenu.Root>
-                                <DropdownMenu.Trigger>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger>
                                     <Image src={Menu} alt="Burger Menu Icon" className="cursor-pointer" />
-                                </DropdownMenu.Trigger>
-                                <DropdownMenu.Content className="flex flex-wrap rounded-[8px] bg-white p-5 z-50">
-                                    {links.map((link, index) => 
-                                        <DropdownMenu.Item key={index} className='mb-[32px]'>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className='bg-white border-none rounded-[8px] p-[1.6rem]'>
+                                    {links.map((link, index) =>
+                                        <DropdownMenuItem key={index} className='mb-[32px]'>
                                             <Link href={link.href} className='text-montserrat_regular_16 opacity-60'>{link.label}</Link>
-                                        </DropdownMenu.Item>
+                                        </DropdownMenuItem>
                                     )}
                                     <ContactUsModal />
-                                </DropdownMenu.Content>
-                            </DropdownMenu.Root>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                         </div>
                     </div>
                 </nav>

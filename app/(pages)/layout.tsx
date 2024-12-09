@@ -1,21 +1,12 @@
-import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
 import { Theme } from "@radix-ui/themes";
 import NavBar from "./_components/NavBar";
 import Footer from "./_components/Footer";
 
-
 const montserrat = Montserrat({
   subsets: ['latin'],
 });
-
-
-export const metadata: Metadata = {
-  title: "Exam",
-  description: "Nextjs landing page exam",
-  
-};
 
 export default function RootLayout({
   children,

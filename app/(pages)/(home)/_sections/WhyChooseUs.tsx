@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-key */
-
 import Authentic from '../../../../public/images/discover/mobile/authentic.png'
 import Locally from '../../../../public/images/discover/mobile/locally.png'
 import Community from '../../../../public/images/discover/mobile/community.png'
@@ -8,23 +6,23 @@ import ContactUsModal from '@/app/_components/ContactUsModal';
 
 const WhyChooseUsPage = () => {
   
-  const listItems = [
-    {
-      img: Authentic,
-      label: 'Authentic Experience',
-      description: 'Enjoy authentic El Salvadoran flavors served in a warm and inviting setting.'
-    },
-    {
-      img: Locally,
-      label: 'Locally Sourced & FreshLocally Sourced & Fresh',
-      description: 'We use the freshest ingredients from local farms, ensuring quality in every bite.'
-    },
-    {
-      img: Community,
-      label: 'Community Focus',
-      description: 'We care about our community, providing high-quality, affordable products and supports local farmers.'
-    }
-  ];
+    const listItems = [
+        {
+            img: Authentic,
+            label: 'Authentic Experience',
+            description: 'Enjoy authentic El Salvadoran flavors served in a warm and inviting setting.'
+        },
+        {
+            img: Locally,
+            label: 'Locally Sourced & FreshLocally Sourced & Fresh',
+            description: 'We use the freshest ingredients from local farms, ensuring quality in every bite.'
+        },
+        {
+            img: Community,
+            label: 'Community Focus',
+            description: 'We care about our community, providing high-quality, affordable products and supports local farmers.'
+        }
+    ];
 
     return (
         <section className='md:py-custom-60 py-custom-40 bg-white'>
