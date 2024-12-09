@@ -7,10 +7,10 @@ const HeroPage = () => {
     return (
         <section className="flex md:py-custom-60 py-custom-40 gap-24">
             <div className="container flex justify-between items-center md:gap-[2.4rem] lg:gap-[3.2rem] xl:gap-[4.8rem] xl:max-w-xl">
-                <div className="flex flex-wrap xl:w-[60.6rem] xl:h-[38rem]">
-                    <h1 className="w-full lex flex-wrap mb-[1.6rem] text-montserrat_bold_32 md:text-montserrat_bold_46 lg:text-montserrat_bold_52">
-                        <span className="w-full text-montserrat_bold_18">Café Quinteros:</span>For&nbsp;
-                        <span className="text-primary">Salvadorans&nbsp; </span>by Salvadorans
+                <div className="flex flex-wrap lg:-w-[44.6rem] xl:w-[60.6rem] xl:h-[38rem]">
+                    <h1 className="w-full mb-[1.6rem] flex flex-wrap text-montserrat_bold_32 md:text-montserrat_bold_46 lg:text-montserrat_bold_52 xl:montserrat_bold_64">
+                        <span className="w-full text-montserrat_bold_18 lg:text-montserrat_bold_22 xl:text-montserrat_bold_32">Café Quinteros:</span>
+                        For&nbsp; <span className="text-primary">Salvadorans</span>by Salvadorans
                     </h1>
                 
                     <p className="mb-[3.2rem] text-montserrat_regular_16 xl:text-montserrat_regular_20 opacity-60">
