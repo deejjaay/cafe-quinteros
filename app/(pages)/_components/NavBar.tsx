@@ -6,8 +6,8 @@ import Logo from '../../../public/images/logo.png';
 import CafeQuinteros from '../../../public/images/Cafe_Quinteros_Logo_landscape_white.png';
 import Link from 'next/link';
 import ContactUsModal from '@/app/_components/ContactUsModal';
-import LanguageDropdown from './dorpdowns/Language';
-import NavItems from './dorpdowns/NavItems';
+import LanguageDropdown from './dropdowns/Language';
+import NavItems from './dropdowns/NavItems';
 
 const NavBar: React.FC = () => {
     const [scrolled, setScrolled] = useState<boolean>(false);
