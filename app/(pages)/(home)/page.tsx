@@ -1,5 +1,4 @@
 import DiscoverOurMenuPage from "./_sections/DiscoverableMenu";
-import MenuItemPage from "../(home)/_components/MenuItem";
 import WhyChooseUsPage from "./_sections/WhyChooseUs";
 import WordsFromCustomersPage from "./_sections/WordsFromCustomers";
 import FAQPage from "./_sections/FAQ";
