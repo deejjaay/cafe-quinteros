@@ -13,6 +13,11 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,7 +41,7 @@ const NavBar = () => {
             className={`sticky top-0 z-50 flex justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-white shadow-lg border-b-2 border-blue' : ''}`}
         >
             <div className='container flex justify-between xl:max-w-xl'>
-                <div className='flex items-center xl:gap-[1.6rem]'>
+                <div className='flex items-center gap-[1.6rem]'>
                     <Link className="flex items-center gap-5" href="/">
                         <Image src={Logo} alt="Logo" width={48} height={48} />
                     </Link>
@@ -80,14 +85,20 @@ const NavBar = () => {
                         </div>
 
                         <div className="flex lg:hidden gap-[3.2rem]">
-                            <DropdownMenu>
+                            <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                                 <DropdownMenuTrigger>
                                     <Image src={Menu} alt="Burger Menu Icon" className="cursor-pointer" />
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent className='bg-white border-none rounded-[.8rem] p-[1.6rem]'>
                                     {links.map((link, index) =>
                                         <DropdownMenuItem key={index} className='mb-[3.rem]'>
-                                            <Link href={link.href} className='w-full first-line:text-montserrat_regular_16 opacity-60'>{link.label}</Link>
+                                            <Link 
+                                                href={link.href} 
+                                                className='w-full first-line:text-montserrat_regular_16 opacity-60'
+                                                onClick={handleLinkClick}
+                                            >
+                                                {link.label}
+                                            </Link>
                                         </DropdownMenuItem>
                                     )}
                                     <ContactUsModal />
