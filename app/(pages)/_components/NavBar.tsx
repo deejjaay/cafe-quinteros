@@ -91,7 +91,7 @@ const NavBar = () => {
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent className='bg-white border-none rounded-[.8rem] p-[1.6rem]'>
                                     {links.map((link, index) =>
-                                        <DropdownMenuItem key={index} className='mb-[3.rem]'>
+                                        <DropdownMenuItem key={index} className='mb-[3.2rem]'>
                                             <Link 
                                                 href={link.href} 
                                                 className='w-full first-line:text-montserrat_regular_16 opacity-60'

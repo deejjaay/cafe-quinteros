@@ -19,7 +19,6 @@ const BestSeller = () => {
                             
                         />
 
-
                         <div className="p-5 flex flex-col justify-between flex-grow">
                             <h4 className="text-montserrat_bold_20 mb-5">{menu.name}</h4>
                             <h5 className="text-montserrat_regular_20 mb-5">{menu.eng_name}</h5>
