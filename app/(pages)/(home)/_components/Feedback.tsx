@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Google from '../../../../public/images/discover/mobile/google.png';
 import Jen from '../../../../public/images/discover/mobile/jen.png';
-import RatingStars from '../_components/RatingIcon';
+import RatingStars from './RatingIcon';
 
-const Testimonials = () => {
+const Feedbacks = () => {
     const users = [
         {
           img: Jen,
@@ -78,4 +78,4 @@ const Testimonials = () => {
     )
 }
 
-export default Testimonials
+export default Feedbacks;

@@ -1,4 +1,4 @@
-import Testimonials from "../_components/Testimonials";
+import Feedbacks from "../_components/Feedback";
 
 const WordsFromCustomersPage = () => {
   
@@ -11,7 +11,7 @@ const WordsFromCustomersPage = () => {
                 </div>
 
                 <div className="overflow-hidden relative">
-                    <Testimonials />
+                    <Feedbacks />
                 </div>
             </div>
         </section>
