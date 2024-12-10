@@ -3,7 +3,7 @@ import Feedbacks from "../_components/Feedback";
 const WordsFromCustomersPage = () => {
   return (
     <section className="md:py-custom-60 py-custom-40 bg-gray">
-        <div className="md:px-0 xl:max-w-xl">
+        <div className="mx-auto md:px-0 xl:max-w-xl">
             <h6 className="mb-[1.6rem] p-[1.6rem] text-montserrat_bold_28 md:text-center md:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48">
                 Words From Our Customers
             </h6>
