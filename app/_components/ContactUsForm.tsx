@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, FormProvider } from "react-hook-form";
+import { useForm, FormProvider, FieldValues } from "react-hook-form";
 import { FormControl, FormField, FormItem, FormMessage } from './ui/Form';
 import { z } from 'zod';
 import { Input } from './ui/input';
@@ -16,13 +16,17 @@ const schema = z.object({
 });
 
 const ContactUsButton = () => {
-    const form = useForm({
+    const form = useForm<FieldValues>({
         resolver: zodResolver(schema),
+        defaultValues: {
+            fullName: '',
+            whatsapp: '',
+            message: '',
+        },
     });
 
     const onSubmit = (data: any) => {
         console.log(data);
-        form.reset();
     };
 
     const users = [
@@ -66,11 +70,10 @@ const ContactUsButton = () => {
                     )}
                 />
 
-                <p className='mb-[32px] text-montserrat_regular_14 text-sub_text'>
-                    <span className="opacity-20">By submitting this form, you agree to our </span>
-                    <Link href={"/"}>Privacy Policy </Link>
-                    <span className="opacity-20">and </span>
-                    <Link href={"/"}>Site Terms</Link>
+                <p className='mb-[32px] text-montserrat_regular_14 text-sub_text/20'>
+                    <span>By submitting this form, you agree to our </span>
+                    <Link href={"/"} className="text-sub_text/100">Privacy Policy </Link>and&nbsp; 
+                    <Link href={"/"} className="text-sub_text/100">Site Terms</Link>
                 </p>
 
                 <Button 

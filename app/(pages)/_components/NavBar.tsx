@@ -34,7 +34,7 @@ const NavBar: React.FC = () => {
 
     return (
         <div
-            className={`sticky top-0 z-50 flex bg-bluish_white justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-white shadow-lg border-b-2 border-blue' : ''}`}
+            className={`sticky top-0 z-50 flex bg-bluish_white justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-bluish_white shadow-lg border-b-2 border-blue' : ''}`}
         >
             <div className="container flex items-center justify-between xl:max-w-xl">
                 <div className="flex items-center gap-[1.6rem]">

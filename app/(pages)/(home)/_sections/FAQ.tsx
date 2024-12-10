@@ -16,11 +16,11 @@ const FAQPage = () => {
   const faqs = [
     {
       question: "Puis-je réserver une table à l'avance ?",
-      answer: "Absolument ! Contactez-nous sur WhatsApp en utilisant ce numéro <span class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</span> pour les réservations."
+      answer: "Absolument ! Contactez-nous sur WhatsApp en utilisant ce numéro <a href='tel:+503-6925-6177' class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</a> pour les réservations."
     },
     {
       question: "Puis-je réserver après les heures d'ouverture ?",
-      answer: "Oui ! Vous devez nous contacter via WhatsApp (<span class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</span>) pour la confirmation finale."
+      answer: "Oui ! Vous devez nous contacter via WhatsApp (<a href='tel:+503-6925-6177' class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</a>) pour la confirmation finale."
     },
     {
       question: "Y a-t-il un espace de stationnement disponible ?",
@@ -36,11 +36,11 @@ const FAQPage = () => {
     },
     {
       question: "Vendez-vous des grains de café ?",
-      answer: "Oui ! Contactez-nous simplement via WhatsApp (<span class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</span>) et faites-nous savoir combien de livres vous souhaitez, et si vous voulez que nous les moulions. Nous pouvons moudre de très fin à grossier."
+      answer: "Oui ! Contactez-nous simplement via WhatsApp (<a href='tel:+503-6925-6177' class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</a>) et faites-nous savoir combien de livres vous souhaitez, et si vous voulez que nous les moulions. Nous pouvons moudre de très fin à grossier."
     },
     {
       question: "Acceptez-vous des demandes spéciales ?",
-      answer: "Absolument ! Si vous avez un événement spécial, nous pouvons faire des accommodations et des commandes spéciales. Contactez-nous via WhatsApp (<span class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</span>) pour organiser tout cela."
+      answer: "Absolument ! Si vous avez un événement spécial, nous pouvons faire des accommodations et des commandes spéciales. Contactez-nous via WhatsApp (<a href='tel:+503-6925-6177' class='text-montserrat_regular_14 md:text-montserrat_bold_18 text-primary'>+503 6925 6177</a>) pour organiser tout cela."
     },    
   ];
 
@@ -71,7 +71,7 @@ const FAQPage = () => {
                         <div
                             className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${openIndex.includes(index) ? 'max-h-screen border-t-2 border-blue' : ''}`}
                         >
-                            <div className="p-[2.8rem] text-start text-montserrat_regular_14 md:text-montserrat_regular_18 opacity-60" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                            <div className="p-[2.8rem] text-start text-sub_text/60 text-montserrat_regular_14 md:text-montserrat_regular_18" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </div>
                     </div>
                 ))}
