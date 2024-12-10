@@ -46,7 +46,7 @@ const FAQPage = () => {
 
     return (
         <section className='md:py-custom-60 py-custom-40 bg-white'>
-            <div className='container xl:max-w-xl'>
+            <div className='container xl:max-w-xl md:text-center'>
                 <h6 className='mb-[3.2rem] text-montserrat_bold_28 md:text-center md:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48'>Frequently Asked Questions</h6>
                 {faqs.map((faq, index) => (
                     <div className="bg-gray rounded-[1rem] mb-[2rem]" key={index}>

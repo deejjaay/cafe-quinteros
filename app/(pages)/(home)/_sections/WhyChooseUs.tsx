@@ -26,14 +26,14 @@ const WhyChooseUsPage = () => {
 
     return (
         <section className='md:py-custom-60 py-custom-40 bg-white'>
-            <div className='container xl:max-w-xl'>
+            <div className='container xl:max-w-xl md:text-center'>
                 <div className='mb-[48px]'>
                     <h6 className='text-montserrat_bold_28 md:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[16px]'>Why Choose Café Quinteros</h6>
                     <p className='text-montserrat_regular_16 opacity-60 lg:text-center'>Taste El Salvador&apos;s regional and local breakfast & lunch in a place that&apos;s more than just a coffee shop.</p>
                 </div>
 
-                <ul className="grid grid-cols-1 gap-[32px] md:grid-cols-1 lg:grid-cols-3">
-                    {listItems.map((item, index) => <li key={index} className='bg-gray gap-[3.2rem] p-[2.4rem] rounded-[1.6rem] mb-[3.2rem]'>
+                <ul className="grid grid-cols-1 md:grid-cols-1 lg:gap-[3.2rem] lg:grid-cols-3">
+                    {listItems.map((item, index) => <li key={index} className='bg-gray gap-[3.2rem] mb-[3.2rem] p-[2.4rem] rounded-[1.6rem]'>
                         <div className='flex flex-col md:flex-row lg:flex-col'>
                             <Image 
                             src={item.img} 
@@ -42,9 +42,9 @@ const WhyChooseUsPage = () => {
                             height={80} 
                             className='pr-[24px] mb-[2.4rem] md:mb-0 lg:mb-[2.4rem]'
                             />
-                            <div className='border-solid border-blue md:pl-[24px] md:border-l-2 lg:ml-auto lg:border-none lg:p-0'>
-                                <span className='text-montserrat_bold_20 mb-[2.4rem]'>{item.label}</span>
-                                <p className='text-montserrat_regular_18 opacity-60 lg:mt-[2.4rem]'>{item.description}</p>
+                            <div className='text-start border-solid border-blue md:pl-[24px] md:border-l-2 lg:ml-auto lg:border-none lg:p-0'>
+                                <span className='text-montserrat_bold_20'>{item.label}</span>
+                                <p className='text-montserrat_regular_18 opacity-60 mt-[2.4rem]'>{item.description}</p>
                             </div>
                         </div>
                     </li>)}
