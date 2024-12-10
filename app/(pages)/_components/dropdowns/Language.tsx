@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Spanish from '../../../../public/images/spanish-flag.png';
 import US from '../../../../public/images/us-flag.png';
 import French from '../../../../public/images/french-flag.png';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../(home)/_components/ui/Dropdown';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../../_components/ui/Dropdown';
 import { FaCaretDown } from 'react-icons/fa';
 
 type Language = 'Spanish' | 'English' | 'French';

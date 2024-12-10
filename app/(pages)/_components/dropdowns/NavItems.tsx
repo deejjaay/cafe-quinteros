@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Menu from '../../../../public/images/menu.png';
 import Link from 'next/link';
 import ContactUsModal from '@/app/_components/ContactUsModal';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../(home)/_components/ui/Dropdown';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../../_components/ui/Dropdown';
 
 interface NavItemsProps {
   isOpen: boolean;

@@ -71,7 +71,7 @@ const FAQPage = () => {
                         <div
                             className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${openIndex.includes(index) ? 'max-h-screen border-t-2 border-blue' : ''}`}
                         >
-                            <div className="p-[2.8rem] text-montserrat_regular_14 md:text-montserrat_regular_18 opacity-60" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                            <div className="p-[2.8rem] text-start text-montserrat_regular_14 md:text-montserrat_regular_18 opacity-60" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </div>
                     </div>
                 ))}

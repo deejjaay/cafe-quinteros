@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { Button } from '../(pages)/(home)/_components/ui/Button';
+import { Button } from './ui/Button';
 
 interface ContactUsButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: 'nav' | 'hero' | 'why_choose';

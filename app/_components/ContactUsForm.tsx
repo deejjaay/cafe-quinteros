@@ -2,17 +2,17 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
-import { FormControl, FormField, FormItem, FormMessage } from '../(pages)/(home)/_components/ui/Form';
+import { FormControl, FormField, FormItem, FormMessage } from './ui/Form';
 import { z } from 'zod';
-import { Input } from '../(pages)/(home)/_components/ui/input';
-import { Textarea } from "../(pages)/(home)/_components/ui/textarea";
+import { Input } from './ui/input';
+import { Textarea } from "./ui/textarea";
 import Link from "next/link";
-import { Button } from "../(pages)/(home)/_components/ui/Button";
+import { Button } from "./ui/Button";
 
 const schema = z.object({
     fullName: z.string().min(3, "Please provide a valid full name"),
     whatsapp: z.string().regex(/^\+?\d{10,15}$/, 'Please provide a valid WhatsApp number'),
-    message: z.string(),
+    message: z.string().optional(),
 });
 
 const ContactUsButton = () => {

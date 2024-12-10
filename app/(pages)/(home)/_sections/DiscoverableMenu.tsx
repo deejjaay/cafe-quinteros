@@ -5,11 +5,11 @@ const DiscoverOurMenuPage = ({}) => {
   
   return (
     <section className="md:py-custom-60 py-custom-40 bg-gray">
-        <div className="container xl:max-w-xl md:text-center">
-            <h2 className="text-montserrat_bold_28 mb:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-5">
+        <div className="container xl:max-w-xl">
+            <h2 className="text-montserrat_bold_28 md:text-center mb:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-5">
                 Discover Our Menu
             </h2>
-            <p className="mb-[4.8rem] text-montserrat_regular_16 lg:text-center xl:text-montserrat_regular_20 opacity-60">
+            <p className="mb-[4.8rem] md:text-center text-montserrat_regular_16 lg:text-center xl:text-montserrat_regular_20 opacity-60">
                 From classic breakfasts to sweet desserts, our menu is filled with Salvadoran favorites.
             </p>
 
