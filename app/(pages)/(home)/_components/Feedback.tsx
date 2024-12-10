@@ -54,7 +54,7 @@ const Feedbacks = () => {
         <ul className="flex flex-wrap md:flex-nowrap animate-none md:animate-slide-right-left md:slide-infinite">
             
             {(isMobile ? users : users.concat(users)).map((user, index) => (
-                <li key={index} className="flex-shrink-0 w-full md:w-[30rem] md:ml-[3.2rem] bg-white rounded-[1.6rem] p-[2.4rem] mb-[1.6rem] md:mb-0">
+                <li key={index} className="flex-shrink-0 w-full md:w-[30rem] md:ml-[3.2rem] bg-bluish_white rounded-[1.6rem] p-[2.4rem] mb-[1.6rem] md:mb-0">
                     <div className='flex w-full mb-[2.4rem] gap-[1.6rem] items-center'>
                         <Image 
                             src={user.img}

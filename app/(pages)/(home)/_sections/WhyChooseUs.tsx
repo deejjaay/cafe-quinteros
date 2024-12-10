@@ -25,7 +25,7 @@ const WhyChooseUsPage = () => {
     ];
 
     return (
-        <section className='md:py-custom-60 py-custom-40 bg-white'>
+        <section className='md:py-custom-60 py-custom-40 bg-bluish_white'>
             <div className='container xl:max-w-xl md:text-center'>
                 <div className='mb-[48px]'>
                     <h6 className='text-montserrat_bold_28 md:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[16px]'>Why Choose Café Quinteros</h6>

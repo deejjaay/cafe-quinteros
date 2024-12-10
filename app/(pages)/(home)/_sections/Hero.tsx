@@ -5,7 +5,7 @@ import ContactUsModal from "@/app/_components/ContactUsModal";
 const HeroPage = () => {
 
     return (
-        <section className="flex md:py-custom-60 py-custom-40 gap-24">
+        <section className="flex md:py-custom-60 py-custom-40 gap-24 bg-bluish_white">
             <div className="container flex justify-between items-center md:gap-[2.4rem] lg:gap-[3.2rem] xl:gap-[4.8rem] xl:max-w-xl">
                 <div className="flex flex-wrap lg:-w-[44.6rem] xl:w-[60.6rem] xl:h-[38rem]">
                     <h1 className="w-full mb-[1.6rem] flex flex-wrap text-montserrat_bold_32 md:text-montserrat_bold_46 lg:text-montserrat_bold_52 xl:montserrat_bold_64">

@@ -59,6 +59,7 @@ const config: Config = {
 			blue: "#9FCADB",
 			brown: "#4C2A07",
 			error: "#C15F56",
+			bluish_white: "#F3FDFF",
   		},
   		boxShadow: {
   			shadow_1: '0px 4px 22.6px 0px rgba(76, 94, 111, 0.07)',
