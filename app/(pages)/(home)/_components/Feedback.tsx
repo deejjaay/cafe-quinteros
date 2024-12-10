@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Google from '../../../../public/images/discover/mobile/google.png';
-import Jen from '../../../../public/images/discover/mobile/jen.png';
+import maria from '../../../../public/images/maria.png';
+import jenn from '../../../../public/images/jenn.png';
+import gil from '../../../../public/images/gil.png';
 import RatingStars from './RatingIcon';
 
 const Feedbacks = () => {
@@ -11,21 +13,21 @@ const Feedbacks = () => {
 
     const users = [
         {
-            img: Jen,
+            img: maria,
             name: 'María Ángeles Córdova',
             rating: '5.0',
             description: 'Delicious freshly prepared breakfast, affordable price',
             posted_on: Google
         },
         {
-            img: Jen,
+            img: jenn,
             name: 'Jennifer Luna',
             rating: '5.0',
             description: 'Everyone should at least taste and try Cafe Quinteros in their lifetime. It’s such a shame if you don’t!',
             posted_on: Google
         },
         {
-          img: Jen,
+          img: gil,
           name: 'Gilbert Clars',
           rating: '5.0',
           description: {
@@ -51,7 +53,7 @@ const Feedbacks = () => {
     }, []);
 
     return (
-        <ul className="flex flex-wrap md:flex-nowrap animate-none md:animate-slide-right-left md:slide-infinite">
+        <ul className="flex flex-wrap md:flex-nowrap animate-none md:animate-slide-right-left md:slide-infinite hover:pause-animation">
             
             {(isMobile ? users : users.concat(users)).map((user, index) => (
                 <li key={index} className="flex-shrink-0 w-full md:w-[30rem] md:ml-[3.2rem] bg-bluish_white rounded-[1.6rem] p-[2.4rem] mb-[1.6rem] md:mb-0">
@@ -59,8 +61,8 @@ const Feedbacks = () => {
                         <Image 
                             src={user.img}
                             alt={user.name}
-                            width={16}
-                            height={16}
+                            width={64}
+                            height={64}
                             className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                         />
                     
