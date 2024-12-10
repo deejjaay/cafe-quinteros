@@ -15,7 +15,7 @@ const WordsFromCustomersPage = () => {
             <div className="flex flex-col md:flex-row md:flex-wrap gap-6">
                 <Feedbacks />
             </div>
-            <div className="hidden md:block fade-effect"></div>
+            <div className="hidden xl:block fade-effect"></div>
         </div>
     </section>
   );
