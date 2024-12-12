@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { menus } from '../../../../public/assets/images';
 import Image from "next/image";
-import path from 'path';
 
 const MenuItemPage = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -11,18 +10,19 @@ const MenuItemPage = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-        const stickyPoint = 80;
-        if (window.scrollY >= stickyPoint) {
-            setIsSticky(true);
-        } else {
-            setIsSticky(false);
-        }
+        const stickyPoint = 0;
+            if (window.scrollY >= stickyPoint) {
+                setIsSticky(true);
+            } 
+            else {
+                setIsSticky(false);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => {
-        window.removeEventListener("scroll", handleScroll);
-        };
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
     }, []);
 
     const categories = [
@@ -40,12 +40,12 @@ const MenuItemPage = () => {
     return (
         <>
             <div className="relative min-h-screen">
-                <div className="p-[.5rem] sticky top-[80px] z-10 bg-gray">
-                    <ul className={`flex gap-[2.4rem] overflow-x-auto whitespace-nowrap scrollbar-hide ${isSticky ? 'mb-[1rem]' : 'mb-[3.2rem]'}`}>
+                <div className={`p-[.5rem] sticky top-[80px] z-10 bg-gray scrollbar-hide ${isSticky ? 'mb-[3.2rem]' : 'mb-[1.5rem]'}`}>
+                    <ul className={`flex gap-[2.4rem] overflow-x-auto whitespace-nowrap`}>
                         {categories.map((category, index) => (
                             <li
                                 key={index}
-                                className={`text-montserrat_regular_20 ${activeTab === category.label 
+                                className={`text-montserrat_regular_20 hover:opacity-100 ${activeTab === category.label 
                                     ? 'border-b-4 border-primary opacity-100' 
                                     : 'opacity-40'}`}
                             >
