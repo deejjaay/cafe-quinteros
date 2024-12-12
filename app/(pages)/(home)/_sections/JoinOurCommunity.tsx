@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Map from '../../../../public/images/discover/mobile/map.png';
+import Map from '../../../../public/images/map.png';
 import Image from 'next/image';
 import { z } from  'zod';
+import { Input } from '@/app/_components/ui/input';
 
 const JoinOurCommunityPage = () => {
     const [whatsappNumber, setWhatsappNumber] = useState('');
@@ -48,8 +49,8 @@ const JoinOurCommunityPage = () => {
                             <form onSubmit={handleSubmit} className="w-full flex flex-wrap items-start gap-[16px] md:flex-nowrap xl:items-end">
                                 <div className="w-full flex flex-col md:flex-row gap-[1.6rem]">
                                     <div className="flex flex-col w-full">
-                                        <input
-                                            className="w-full h-[6.4rem] rounded-[.8rem] px-[1.6rem] text-montserrat_regular_16"
+                                        <Input
+                                            className="h-[6.4rem] border-none focus:ring-none"
                                             type="text"
                                             placeholder="WhatsApp number*"
                                             value={whatsappNumber}
@@ -67,13 +68,19 @@ const JoinOurCommunityPage = () => {
                             </form>
                         </div>
 
-                        <Image 
-                            src={Map} 
-                            width={352} 
-                            height={410}
-                            alt={'Map'} 
-                            className="w-full object-cover rounded-[8px] md:h-[410px] xl:h-[251px]"
-                        />
+                        <div className="relative w-full group">
+                            <Image 
+                                src={Map} 
+                                width={470} 
+                                height={251}
+                                alt={'Map'} 
+                                className="w-full h-[41rem] object-cover rounded-[8px] md:h-[410px] xl:h-[251px]"
+                            />
+                            <p className="absolute bottom-0 left-0 w-full px-[.8rem] py-[1.8rem] text-montserrat_regular_12 bg-sub_text/50 text-bluish_white/60 p-2 group-hover:hidden">
+                                We are conveniently located between Hospital Centro Pediátrico and UPED (Universidad Pedagógica de El Salvador)
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>

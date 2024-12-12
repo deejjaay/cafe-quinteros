@@ -7,7 +7,7 @@ const WordsFromCustomersPage = () => {
             <h6 className="mb-[1.6rem] p-[1.6rem] text-montserrat_bold_28 md:text-center md:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48">
                 Words From Our Customers
             </h6>
-            <p className="mb-[2.4rem] p-[1.6rem] text-montserrat_regular_16 opacity-60 md:text-center md:px-[4rem] lg:px-[10rem]">
+            <p className="mb-[2.4rem] px-[1.6rem] text-montserrat_regular_16 opacity-60 md:container md:text-center md:px-[4rem] lg:px-[10rem]">
                 Our customers love our food and friendly vibe! Discover why we’re the top choice for El Salvadoran breakfast and lunch.
             </p>
             <div className="relative p-[1.6rem] overflow-hidden md:mx-0 xl:mx-[12rem]">

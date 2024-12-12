@@ -27,6 +27,7 @@ const config: Config = {
 				Montserrat: ["montserrat", "sans-serif"]
 			},
 			fontSize: {
+				montserrat_regular_12: ["1.2rem", { lineHeight: "1.92rem", fontWeight: "400" }],
 				montserrat_regular_14: ["1.4rem", { lineHeight: "2.2rem", fontWeight: "400" }],
 				montserrat_bold_14: ["1.4rem", { lineHeight: "2.2rem", fontWeight: "700" }],
 				montserrat_regular_16: ["1.6rem", { lineHeight: "2.56rem", fontWeight: "400" }],
