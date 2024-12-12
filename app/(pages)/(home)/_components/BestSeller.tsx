@@ -5,7 +5,7 @@ const BestSeller = () => {
     const bestSellers = menus.filter(menu => menu.best_seller);
     
     return (
-        <ul className="grid grid-cols-1 gap-[3.2rem] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mb-[8rem]"> 
+        <ul className=" mb-[6rem] grid grid-cols-1 gap-[3.2rem] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"> 
             {bestSellers.map((menu, index) => (
                 <li
                     key={index}

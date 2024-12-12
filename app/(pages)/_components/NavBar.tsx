@@ -56,9 +56,8 @@ const NavBar: React.FC = () => {
                 <nav className="md:flex items-center gap-[3.2rem]">
                     <ul className="hidden lg:flex gap-[3.2rem]">
                         {filteredLinks.map((link, index) => (
-                            <li className='text-sub_text/60'>
+                            <li key={index} className='text-sub_text/60'>
                                 <Link 
-                                    key={index} 
                                     href={link.href} 
                                     className="text-lg text-montserrat_regular_16 hover:text-primary"
                                 >

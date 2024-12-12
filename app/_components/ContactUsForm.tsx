@@ -10,12 +10,12 @@ import Link from "next/link";
 import { Button } from "./ui/Button";
 
 const schema = z.object({
-    fullName: z.string().min(3, "Please provide a valid full name"),
-    whatsapp: z.string().regex(/^\+?\d{10,15}$/, 'Please provide a valid WhatsApp number'),
+    fullName: z.string().min(3, "Please provide a valid full name."),
+    whatsapp: z.string().regex(/^\+?\d{10,15}$/, 'Please provide a valid WhatsApp number.'),
     message: z.string().optional(),
 });
 
-const ContactUsButton = () => {
+const ContactUsForm = () => {
     const form = useForm<FieldValues>({
         resolver: zodResolver(schema),
         defaultValues: {
@@ -27,6 +27,7 @@ const ContactUsButton = () => {
 
     const onSubmit = (data: any) => {
         console.log(data);
+        form.reset();
     };
 
     const users = [
@@ -87,4 +88,4 @@ const ContactUsButton = () => {
     );
 };
 
-export default ContactUsButton;
+export default ContactUsForm;

@@ -2,41 +2,28 @@ import * as React from "react"
 import { cn } from "@/app/_utils"
 
 const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
-  ({ className, type, ...props }, ref) => {
-    return (
+    ({ className, type, ...props }, ref) => {
+        return (
         <div className="relative w-full">
             <input
                 type={type}
                 autoComplete="off"
                 className={cn(
-                    "peer flex w-full h-[48px] px-4 py-2 mb-[8px] rounded-[8px] border border-sub_text bg-gray text-montserrat_regular_16 ring-offset-background file:border-0 file:bg-transparent file:text-montserrat_regular_16 file:font-medium file:text-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-montserrat_regular_16 focus:ring-2 focus:ring-primary placeholder-transparent",
+                    "peer flex w-full h-[48px] px-4 py-2 mb-[8px] rounded-[8px] border border-gray-400 bg-gray text-montserrat_regular_16 ring-offset-background file:border-0 file:bg-transparent file:text-montserrat_regular_16 file:font-medium file:text-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-montserrat_regular_16 focus:ring-2 focus:ring-primary placeholder-transparent",
                     className
                 )}
                 ref={ref}
                 {...props}
             />
-            
-            <style jsx>{`
-            .peer::placeholder {
-                transition: all 0.2s ease-in-out;
-                position: absolute;
-                left: 16px;
-                top: 35%;
-                transform: translateY(-10%);
-                color: #9ca3af;
-                font-size: 1.
-            }
-
-            .peer:focus::placeholder,
-            .peer:not(:placeholder-shown)::placeholder {
-                top: 0;
-                font-size: 1rem;
-                color: sub_text;
-            }
-            `}</style>
+            <label
+                htmlFor={props.id}
+                className="absolute left-4 top-4 -translate-y-1/2 text-[1rem] text-gray-500 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-montserrat_regular_16 peer-focus:top-4 peer-focus:text-[1rem] peer-focus:gray"
+            >
+                {props.placeholder}
+            </label>
         </div>
-    )
-  }
+        )
+    }
 )
 
 Input.displayName = "Input"
