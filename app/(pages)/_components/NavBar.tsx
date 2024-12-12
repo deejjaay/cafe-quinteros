@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -34,7 +35,7 @@ const NavBar: React.FC = () => {
 
     return (
         <div
-            className={`sticky top-0 z-50 flex bg-bluish_white justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-bluish_white shadow-lg border-b-2 border-blue' : ''}`}
+            className={`sticky top-0 z-50 h-[9.6rem] flex bg-bluish_white justify-between items-center py-[1.6rem] transition-all ${scrolled ? 'bg-bluish_white shadow-lg border-b-2 border-blue' : ''}`}
         >
             <div className="container flex items-center justify-between xl:max-w-xl">
                 <div className="flex items-center gap-[1.6rem]">
@@ -46,24 +47,26 @@ const NavBar: React.FC = () => {
                             src={CafeQuinteros}
                             alt="Cafe Quinteros"
                             width={172}
-                            height={14}
+                            height={64}
                             className="hidden md:w-[17.2rem] md:h-[1.4rem] md:block xl:h-[1.4rem]"
                         />
                     </Link>
                 </div>
 
                 <nav className="md:flex items-center gap-[3.2rem]">
-                    <div className="hidden lg:flex gap-[3.2rem]">
+                    <ul className="hidden lg:flex gap-[3.2rem]">
                         {filteredLinks.map((link, index) => (
-                            <Link 
-                                key={index} 
-                                href={link.href} 
-                                className="text-lg text-montserrat_regular_16"
-                            >
-                                {link.label}
-                            </Link>
+                            <li className='text-sub_text/60'>
+                                <Link 
+                                    key={index} 
+                                    href={link.href} 
+                                    className="text-lg text-montserrat_regular_16 hover:text-primary"
+                                >
+                                    {link.label}
+                                </Link>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     <div className="flex gap-[1.6rem]">
                         <div className="flex items-center gap-[3.2rem]">
