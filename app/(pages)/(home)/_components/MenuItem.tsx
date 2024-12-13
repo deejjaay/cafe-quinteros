@@ -11,7 +11,6 @@ type Category = {
 const MenuItemPage = () => {
     const [activeTab, setActiveTab] = useState('All');
     const [isSticky, setIsSticky] = useState(false);
-
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -44,14 +43,16 @@ const MenuItemPage = () => {
 
     const handleTabClick = (category: Category) => {
         setActiveTab(category.label);
-        containerRef.current;
+        if (containerRef.current) {
+            containerRef.current.scrollIntoView({ block: 'start' });
+        }
     };
 
     return (
         <>
             <div 
                 ref={containerRef}
-                className="relative"
+                className={`relative ${filteredMenus.length > 3 ? 'min-h-screen' : ''}`}
             >
                 <div className={`p-[.5rem] pt-[1rem] sticky top-[9.6rem] z-10 bg-gray scrollbar-hide ${isSticky ? 'mb-[3.2rem]' : 'mb-[1.5rem]'}`}>
                     <ul className={`flex gap-[2.4rem] overflow-x-auto whitespace-nowrap`}>
