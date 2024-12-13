@@ -17,7 +17,7 @@ const Textarea = React.forwardRef<
         <div className="relative w-full">
             <textarea
                 className={cn(
-                    "peer flex resize-none px-5 py-5 w-full min-h-[14rem] rounded-[8px] border border-sub_text/20 bg-gray text-montserrat_regular_16 ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 focus:ring-2 focus:ring-primary placeholder-transparent",
+                    "peer flex resize-none px-5 py-5 w-full min-h-[14rem] rounded-[8px] border border-sub_text/20 bg-gray text-montserrat_regular_16 ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 focus:ring-1 focus:ring-primary placeholder-transparent",
                     className
                 )}
                 ref={ref}

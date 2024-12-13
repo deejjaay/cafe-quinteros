@@ -50,7 +50,7 @@ const JoinOurCommunityPage = () => {
                                 <div className="w-full flex flex-col md:flex-row gap-[1.6rem]">
                                     <div className="flex flex-col w-full">
                                         <Input
-                                            className="h-[6.4rem] border-none focus:ring-none"
+                                            className="h-[6.4rem] border-none focus:ring-0 pt-[1.77rem] pb-[1rem]"
                                             type="text"
                                             placeholder="WhatsApp number*"
                                             value={whatsappNumber}
