@@ -36,11 +36,11 @@ const WhyChooseUsPage = () => {
                     {listItems.map((item, index) => <li key={index} className='bg-gray gap-[3.2rem] mb-[3.2rem] p-[2.4rem] rounded-[1.6rem]'>
                         <div className='flex flex-col md:flex-row lg:flex-col'>
                             <Image 
-                            src={item.img} 
-                            alt={item.label} 
-                            width={81.4} 
-                            height={80} 
-                            className='pr-[2.4rem] mb-[2.4rem] md:mb-0 lg:mb-[2.4rem]'
+                                src={item.img} 
+                                alt={item.label} 
+                                width={81.4} 
+                                height={80} 
+                                className='w-[8.1rem] pr-[2.4rem] mb-[2.4rem] md:mb-0 lg:mb-[2.4rem] lg:pr-0'
                             />
                             <div className='text-start border-solid border-blue md:pl-[2.4rem] md:border-l-2 lg:ml-auto lg:border-none lg:p-0'>
                                 <span className='text-montserrat_bold_20'>{item.label}</span>
