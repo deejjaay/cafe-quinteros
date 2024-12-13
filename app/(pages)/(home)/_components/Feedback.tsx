@@ -91,7 +91,7 @@ const Feedbacks = () => {
                 
                     <div className='flex w-full text-montserrat_regular_16 mt-auto'>
                         <span className='pr-[1.6rem] opacity-60'>Posted on</span>
-                        <Image src={user.posted_on} alt={'Google'} />
+                        <Image width={65} height={24} src={user.posted_on} alt={'Google'} />
                     </div>
                 </li>
             ))}

@@ -23,8 +23,8 @@ const Footer = () => {
                         <Image 
                             src={Logo} 
                             alt={'Logo'} 
-                            width={48} 
-                            height={48} 
+                            width={108} 
+                            height={108} 
                             className='mr-5'
                         />
                     </Link>
@@ -33,8 +33,8 @@ const Footer = () => {
                         <Image 
                             src={CafeQuinteros} 
                             alt={'Cafe Quinteros'} 
-                            width={282.85} 
-                            height={22} 
+                            width={540} 
+                            height={42.7} 
                             className='w-[282.85px] h-[22px] mr-5 sm:w-[282.85px] sm:h-[22px] md:w-[540px] md:h-[42.7px]' 
                         />
                     </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
                         <div className='flex w-full flex-wrap md:flex-nowrap items-center whitespace-nowrap gap-[16px] xl:justify-end'>
                             <span className='text-montserrat_regular_16 opacity-30'>Developed by</span>
                             <Link href={'/'}>
-                                <Image src={Armada} alt={'Armada Logo'} width={159} height={36} />
+                                <Image src={Armada} alt={'Armada Logo'} width={176.33} height={40} />
                             </Link>
                         </div>
                     </li>
