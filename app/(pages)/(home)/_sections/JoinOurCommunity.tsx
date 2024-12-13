@@ -34,11 +34,11 @@ const JoinOurCommunityPage = () => {
     return (
         <section className="bg-cover bg-center bg-opacity-70 bg-[url('/images/discover/mobile/map.png')]">
             <div className='bg-brown opacity-90'>
-                <div className='container xl:max-w-xl'>
-                    <div className='gap-[8rem] py-[4rem] md:py-[6rem] md:flex-wrap grid xl:grid-cols-2'>
-                        <div className="md:flex md:flex-wrap">
+                <div className='container relative xl:flex xl:max-w-xl xl:items-center'>
+                    <div className='gap-[8rem] py-[4rem] md:py-[6rem] md:flex md:flex-wrap xl:flex-nowrap xl:py-[12rem]'>
+                        <div className="md:flex md:flex-wrap xl:max-w-[65rem]">
                             <div className="md:flex md:flex-wrap md:w-full mb-[4.8rem]">
-                                <h6 className="w-full text-montserrat_bold_24 text-white mb-[1.6rem]">
+                                <h6 className="w-full text-montserrat_bold_24 text-white mb-[1.6rem] md:text-montserrat_bold_40 lg:text-montserrat_bold_46 xl:text-montserrat_bold_48">
                                     Join Our Cafe Community
                                 </h6>
                                 <p className="text-montserrat_regular_16 text-white opacity-60">
@@ -60,7 +60,7 @@ const JoinOurCommunityPage = () => {
                                     </div>
                                     <button 
                                         type="submit" 
-                                        className="w-full px-[1.6rem] h-[6.4rem] rounded-[.8rem] text-white bg-primary text-montserrat_bold_16_1 whitespace-nowrap md:w-auto"
+                                        className="w-full mb-[8rem] px-[1.6rem] h-[6.4rem] rounded-[.8rem] text-white bg-primary text-montserrat_bold_16_1 whitespace-nowrap md:w-auto md:mb-0"
                                     >
                                         Join Community
                                     </button>
@@ -68,7 +68,7 @@ const JoinOurCommunityPage = () => {
                             </form>
                         </div>
 
-                        <div className="relative w-full group">
+                        <div className="relative w-full group xl:col-start-3">
                             <Image 
                                 src={Map} 
                                 width={470} 
@@ -80,7 +80,6 @@ const JoinOurCommunityPage = () => {
                                 We are conveniently located between Hospital Centro Pediátrico and UPED (Universidad Pedagógica de El Salvador)
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
