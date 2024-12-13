@@ -46,7 +46,7 @@ const JoinOurCommunityPage = () => {
                                 </p>
                             </div>
 
-                            <form onSubmit={handleSubmit} className="w-full flex flex-wrap items-start gap-[16px] md:flex-nowrap xl:items-end">
+                            <form onSubmit={handleSubmit} className="w-full flex flex-wrap items-start gap-[1.6rem] md:flex-nowrap xl:items-end">
                                 <div className="w-full flex flex-col md:flex-row gap-[1.6rem]">
                                     <div className="flex flex-col w-full">
                                         <Input
@@ -74,7 +74,7 @@ const JoinOurCommunityPage = () => {
                                 width={470} 
                                 height={251}
                                 alt={'Map'} 
-                                className="w-full h-[41rem] object-cover rounded-[8px] md:h-[410px] xl:h-[251px]"
+                                className="w-full h-[41rem] object-cover rounded-[.8rem] md:h-[41rem] xl:h-[25.1rem]"
                             />
                             <p className="absolute bottom-0 left-0 w-full px-[.8rem] py-[1.8rem] text-montserrat_regular_12 bg-sub_text/50 text-bluish_white/60 p-2 group-hover:hidden">
                                 We are conveniently located between Hospital Centro Pediátrico and UPED (Universidad Pedagógica de El Salvador)

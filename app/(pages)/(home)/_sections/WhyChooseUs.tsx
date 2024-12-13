@@ -27,8 +27,8 @@ const WhyChooseUsPage = () => {
     return (
         <section className='md:py-custom-60 py-custom-40 bg-bluish_white'>
             <div className='container xl:max-w-xl md:text-center'>
-                <div className='mb-[48px]'>
-                    <h6 className='text-montserrat_bold_28 md:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[16px]'>Why Choose Café Quinteros</h6>
+                <div className='mb-[4.8rem]'>
+                    <h6 className='text-montserrat_bold_28 md:text-montserrat_bold_40 lg:text-center lg:text-montserrat_bold_46 xl:text-montserrat_bold_48 mb-[1.6rem]'>Why Choose Café Quinteros</h6>
                     <p className='text-montserrat_regular_16 opacity-60 lg:text-center'>Taste El Salvador&apos;s regional and local breakfast & lunch in a place that&apos;s more than just a coffee shop.</p>
                 </div>
 
@@ -40,9 +40,9 @@ const WhyChooseUsPage = () => {
                             alt={item.label} 
                             width={81.4} 
                             height={80} 
-                            className='pr-[24px] mb-[2.4rem] md:mb-0 lg:mb-[2.4rem]'
+                            className='pr-[2.4rem] mb-[2.4rem] md:mb-0 lg:mb-[2.4rem]'
                             />
-                            <div className='text-start border-solid border-blue md:pl-[24px] md:border-l-2 lg:ml-auto lg:border-none lg:p-0'>
+                            <div className='text-start border-solid border-blue md:pl-[2.4rem] md:border-l-2 lg:ml-auto lg:border-none lg:p-0'>
                                 <span className='text-montserrat_bold_20'>{item.label}</span>
                                 <p className='text-montserrat_regular_18 opacity-60 mt-[2.4rem]'>{item.description}</p>
                             </div>

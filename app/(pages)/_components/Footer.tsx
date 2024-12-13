@@ -18,7 +18,7 @@ const Footer = () => {
     return (
         <footer className='md:py-custom-60 py-custom-40 bg-gray '>
             <div className='container xl:max-w-xl'>
-                <div className='flex items-center justify-center mb-[24px] border-b-2 border-b-blue pb-[24px]'>
+                <div className='flex items-center justify-center mb-[2.4rem] border-b-2 border-b-blue pb-[2.4rem]'>
                     <Link href={'/'}>
                         <Image 
                             src={Logo} 
@@ -35,17 +35,17 @@ const Footer = () => {
                             alt={'Cafe Quinteros'} 
                             width={540} 
                             height={42.7} 
-                            className='w-[282.85px] h-[22px] mr-5 sm:w-[282.85px] sm:h-[22px] md:w-[540px] md:h-[42.7px]' 
+                            className='w-[28.28rem] h-[2.2rem] mr-5 sm:w-[28.28rem] sm:h-[2.2rem] md:w-[54rem] md:h-[4.27rem]' 
                         />
                     </Link>
                 </div>
 
-                <ul className='flex-wrap gap-[32px] grid md:grid-cols-3 lg:grid-cols-3'>
+                <ul className='flex-wrap gap-[3.2rem] grid md:grid-cols-3 lg:grid-cols-3'>
                     <li className='flex w-full flex-wrap'>
-                        <h6 className='w-full text-montserrat_bold_18 opacity-60 mb-[16px]'>Contact Us</h6>
-                        <span className='w-full text-montserrat_regular_16 opacity-60 mb-[16px]'>+503-6925-6177</span>
+                        <h6 className='w-full text-montserrat_bold_18 opacity-60 mb-[1.6rem]'>Contact Us</h6>
+                        <span className='w-full text-montserrat_regular_16 opacity-60 mb-[1.6rem]'>+503-6925-6177</span>
 
-                        <ul className='flex w-full mb-[32px]'>
+                        <ul className='flex w-full mb-[3.2rem]'>
                             {socmeds.map((socmed, index) => (
                                 <li key={index}>
                                     <Link href={socmed.href}>
@@ -65,17 +65,17 @@ const Footer = () => {
                     </li>
 
                     <li className='w-full'>
-                        <span className='flex w-full text-montserrat_bold_18 opacity-60 mb-[16px]'>About Us</span>
+                        <span className='flex w-full text-montserrat_bold_18 opacity-60 mb-[1.6rem]'>About Us</span>
                         <span className='w-full text-montserrat_regular_16 opacity-60'>About Café Quinteros</span>
                     </li>
 
-                    <li className='flex w-full flex-wrap mt-[auto] gap-[48px]'>
-                        <div className='md:mb-[23.81px]'>
-                            <h6 className='flex w-full text-montserrat_bold_18 opacity-60 mb-[16px]'>Visit Café Quinteros</h6>
+                    <li className='flex w-full flex-wrap mt-[auto] gap-[4.8rem]'>
+                        <div className='md:mb-[2.38rem]'>
+                            <h6 className='flex w-full text-montserrat_bold_18 opacity-60 mb-[1.6rem]'>Visit Café Quinteros</h6>
                             <p className='w-full text-montserrat_regular_16 opacity-60'>Colonia Medica, Pasaje Llort #120, San Salvador, El Salvador</p>
                         </div>
 
-                        <div className='flex w-full flex-wrap md:flex-nowrap items-center whitespace-nowrap gap-[16px] xl:justify-end'>
+                        <div className='flex w-full flex-wrap md:flex-nowrap items-center whitespace-nowrap gap-[1.6rem] xl:justify-end'>
                             <span className='text-montserrat_regular_16 opacity-30'>Developed by</span>
                             <Link href={'/'}>
                                 <Image src={Armada} alt={'Armada Logo'} width={176.33} height={40} />
