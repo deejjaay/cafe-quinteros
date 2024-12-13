@@ -44,16 +44,14 @@ const MenuItemPage = () => {
 
     const handleTabClick = (category: Category) => {
         setActiveTab(category.label);
-        if (containerRef.current) {
-            containerRef.current.scrollIntoView({ block: 'start' });
-        }
+        containerRef.current;
     };
 
     return (
         <>
             <div 
                 ref={containerRef}
-                className="relative min-h-screen"
+                className="relative"
             >
                 <div className={`p-[.5rem] pt-[1rem] sticky top-[9.6rem] z-10 bg-gray scrollbar-hide ${isSticky ? 'mb-[3.2rem]' : 'mb-[1.5rem]'}`}>
                     <ul className={`flex gap-[2.4rem] overflow-x-auto whitespace-nowrap`}>
