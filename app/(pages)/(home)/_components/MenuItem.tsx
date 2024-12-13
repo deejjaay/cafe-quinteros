@@ -44,7 +44,9 @@ const MenuItemPage = () => {
     const handleTabClick = (category: Category) => {
         setActiveTab(category.label);
         if (containerRef.current) {
-            containerRef.current.scrollIntoView({ block: 'start' });
+            const tabMenuHeight = document.querySelector('.sticky')?.clientHeight || 0;
+        
+            window.scrollTo(0, containerRef.current.offsetTop - tabMenuHeight);
         }
     };
 
