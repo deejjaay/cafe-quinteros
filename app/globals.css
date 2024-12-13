@@ -10,27 +10,27 @@ html {
 
 @keyframes slide-right-left {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%); 
+        transform: translateX(-50%); 
     }
   }
 
   @keyframes slide-infinite {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
   }
   
 .animate-slide-right-left {
-  animation: slide-right-left 15s linear infinite;
+    animation: slide-right-left 15s linear infinite;
 }
   
-  .scrollbar-hide::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
 
@@ -49,5 +49,19 @@ html {
 }
 
 html {
-  scroll-behavior: auto !important;
+    scroll-behavior: auto !important;
 }
+
+.dialog-scrollable::-webkit-scrollbar {
+    width: .8rem; 
+}
+
+.dialog-scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dialog-scrollable::-webkit-scrollbar-thumb {
+    background-color: #c5dbe4;
+    border-radius: 10px;
+}
+
